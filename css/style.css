@@ -148,6 +148,7 @@ header{
     max-width: 1170px;
     margin: 0 auto;
     border: 2px solid green;
+    
 }
 
 /* common setting */
@@ -156,6 +157,13 @@ header{
     margin-top: 20px;
     position: relative;
     border: 2px solid orange;
+    overflow: hidden;
+}
+h1{
+    font-size: 65px;
+}
+p{
+    font-size: 18px;
 }
 
 /* $content */
@@ -282,7 +290,30 @@ header{
     border: 2px solid #2d2d2d;
     width: 80%;
     left: 10%;
-    
+    overflow: auto;
+   
+     
+}
+@media (max-width:425px){
+    .news_box{
+        height: 600px;
+        width: 100%;
+        left: 0%;
+    }
+}
+@media (max-width:375px){
+    .news_box{
+        height: 700px;
+        width: 100%;
+        left: 0%;
+    }
+}
+@media (max-width:320px){
+    .news_box{
+        height: 500px;
+        width: 100%;
+        left: 0%;
+    }
 }
 .news_all{
     font-size: 18px;
@@ -346,15 +377,19 @@ header{
 }
 @media (max-width:1240px){
     .skew_right{
-     padding: 0px 0px;  
+     padding: 0px 500px;  
     }
     .skew_right_vido{
     right: -15%;    
     }
 }
 @media (max-width:768px){
+    .skew_right{
+     padding: 0px 0px;  
+    }
     .skew_right_vido{
-    right: -15%;
+     
+     right: -15%;
      bottom: 6%;     
     }
     
@@ -368,13 +403,65 @@ header{
 }
 @media (max-width:411px){
     .skew_right_vido{
-    right: -110%;
+    right: -90%;
          
     }
+   
+}
+.about_title{
+    top: 20%;
+    color: blue;
     
 }
+.about_text{
+  position: absolute;
+  right: 30%;
+  color: aliceblue;
+  top: 50%;
 
+}
+.about_text p{
+    margin: 20px;
+    right: 10px;;
+}
 
+@media (max-width:768px){
+    .about_text{
+  position: absolute;
+  right: 20%;
+  color: aliceblue;
+  top: 80%;
+
+    }
+}
+@media (max-width:425px){
+    .about_title{
+    top: 0%;
+    color: blue;
+    
+}
+    .about_text{
+ 
+  right: -5%;
+  
+  top: 150%;
+
+    }
+}
+@media (max-width:425px){
+    .about_title{
+    top: 0%;
+    color: blue;
+    
+}
+    .about_text{
+ 
+  right: -5%;
+  
+  top: 130%;
+
+    }
+}
 /* $footer */
 .footer{
     position: relative;
@@ -390,7 +477,7 @@ header{
     padding-left: 20px;
     color: aliceblue;
     font-size: 30px;
-    
+   
     
 }
 
