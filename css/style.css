@@ -161,6 +161,7 @@ header{
 }
 h1{
     font-size: 65px;
+    color: blue;
 }
 p{
     font-size: 18px;
@@ -281,10 +282,7 @@ p{
     height: 100vh;
 }
 
-.news_title{
-    
-    font-size: 25px;
-}
+
 .news_box{
     margin-top: 10px;
     border: 2px solid #2d2d2d;
@@ -293,6 +291,11 @@ p{
     overflow: auto;
    
      
+}
+@media (min-width:1024px){
+    .news_box{
+        margin-top: 10vh;
+    }
 }
 @media (max-width:425px){
     .news_box{
@@ -782,14 +785,14 @@ p{
     }
     .contect_text h1{
     right: 15%;
-    top: 80px;
+    top: 50px;
     
     }
     .contect_text ul{
     padding-top: 8%;
     position: absolute;
     right: 0;
-    top: 250px;
+    top: 170px;
     font-size: 18px;
     
     
