@@ -688,7 +688,7 @@ p{
     .contect_text h1{
    
     right: 10%;
-    top: 90px;
+    top: 80px;
     
     }
     .contect_text ul{
@@ -709,24 +709,113 @@ p{
     width: 400px;
     /* background-color: blue; */
     bottom: 35%; 
-    transform: skew(-20deg);
-    border: 8px blue solid;
-    overflow: hidden;
+    
+    
     }
     .contect_text h1{
    
     right: 15%;
-    top: 90px;
+    top: 80px;
     
     }
+    
 
 }
 @media (max-width:768px){
+    
     .skew_right_contect{
     position: absolute;
     right: -15%;
     height: 50%;
-    padding: 0px 400px}
+    padding: 0px 400px
+    }
+    .skew_right_pic{
+   position: absolute;
+    left:-5%;
+    height: 40%;
+    width: 400px;
+    /* background-color: blue; */
+    bottom: 35%; 
+    transform: skew(-20deg);
+    border: 8px blue solid;
+    overflow: hidden;
+    }
+    .map{
+        left: -80%;
+    }
+    .contect_text h1{
+    right: 15%;
+    top: 80px;
+    
+    }
+    .contect_text ul{
+    padding-top: 8%;
+    position: absolute;
+    right: 0;
+    top: 250px;
+    font-size: 18px;
+    
+    
+    }
+}
+@media (max-width:425px){
+    
+    .skew_right_contect{
+    position: absolute;
+    right: -15%;
+    height: 50%;
+    padding: 0px 250px
+    }
+    .skew_right_pic{
+   position: absolute;
+    left:-5%;
+    height: 40%;
+    width: 400px;
+    /* background-color: blue; */
+    bottom: 0%; 
+    transform: skew(-20deg);
+    border: 8px blue solid;
+    overflow: hidden;
+    }
+    .map{
+        left: -80%;
+    }
+    .contect_text h1{
+    right: 15%;
+    top: 80px;
+    
+    }
+    .contect_text ul{
+    padding-top: 8%;
+    position: absolute;
+    right: 0;
+    top: 250px;
+    font-size: 18px;
+    
+    
+    }
+}
+@media (max-width:375px){
+    .skew_right_contect{
+    position: absolute;
+    right: -15%;
+    height: 50%;
+    padding: 0px 230px
+    }
+    .contect_text h1{
+    right: 15%;
+    top: 50px;
+    
+    }
+    .contect_text ul{
+    padding-top: 8%;
+    position: absolute;
+    right: 5%;
+    top: 170px;
+    font-size: 15px;
+    
+    
+    }
 }
 
 /* $footer */
