@@ -48,7 +48,7 @@ $(document).ready(function () {
     $('.content_icon').click(function (e) { 
         e.preventDefault();
         $('html,body').animate({
-            scrollTop: 1000
+            scrollTop: 900
         }, 1000);
     });
 
