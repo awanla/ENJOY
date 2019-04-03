@@ -22,17 +22,23 @@ body{
     font-family: 'Noto Sans TC', sans-serif;
 }
 .gototop{
-    background-image: url(../images/gotoup.svg);
+   
     position: fixed;
     height: 50px;
     width: 50px;
-    fill: blue;
+    cursor: pointer;
     right: 15px;
-    bottom: 7%;
+    bottom: 2%;
     z-index: 1;
     transition: all 1s;
     cursor: pointer;
     display: none;
+    background-color:aliceblue;
+    border-radius: 50%;
+}
+.gototop i{
+   font-size: 50px; 
+   color: blue;
 }
 .scrollTop:hover{
     bottom: 9%;
@@ -147,7 +153,7 @@ header{
 .container{
     max-width: 1170px;
     margin: 0 auto;
-    border: 2px solid green;
+    /* border: 2px solid green; */
     
 }
 
@@ -156,8 +162,32 @@ header{
     height: 100vh;
     margin-top: 20px;
     position: relative;
-    border: 2px solid orange;
+    /* border: 2px solid orange; */
     overflow: hidden;
+}
+.top_left , .down_right ,.down_left{
+    position: absolute;
+    font-size: 200px;
+    font-family: 'Bungee', cursive;
+    color: blue;
+    opacity: 0.2;
+    
+}
+.top_left{
+    top:30px;
+}
+.down_right{
+    right: 0;
+    bottom: 30px;
+}
+.down_left{
+     
+    bottom: 30px;
+}
+@media(max-width:425px){
+    .top_left , .down_right ,.down_left{
+        display: none;
+    }
 }
 h1{
     font-size: 65px;
@@ -276,12 +306,68 @@ p{
     }
 }
 
+/* $content animate */
+
+@keyframes fade {
+    0%{
+        opacity: 0;
+        width: 150%;
+    }
+    
+    100%{
+        opacity: 1;
+        width: 100%;
+    }
+}
+@keyframes from_left{
+     0%{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes from_right{
+     0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes infinity{
+     0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(20px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
 /* news */
+
 .news{
     position: relative;
     height: 100vh;
 }
-
+.news_title{
+    transform: translateX(-100px);
+    transition: all 2.5s; 
+    opacity: 0;
+}
+.news_title_animation{
+    opacity: 1;
+    transform: translateX(0px); 
+}
 
 .news_box{
     margin-top: 10px;
@@ -289,9 +375,15 @@ p{
     width: 80%;
     left: 10%;
     overflow: auto;
-   
-     
+    transform: translateX(100px);
+    transition: all 2.5s; 
+    opacity: 0;    
 }
+.news_box_animation{
+    opacity: 1;
+    transform: translateX(0px); 
+}
+
 @media (min-width:1024px){
     .news_box{
         margin-top: 10vh;
@@ -340,7 +432,13 @@ p{
     padding: 0px 600px;
     background-color: blue;
     bottom: 25%; 
-    transform: skew(-20deg)
+    transform: skew(-20deg) translateX(100px);
+    transition: all 2s; 
+    opacity: 0;
+}
+.skew_right_animation{
+    opacity: 1;
+    transform: skew(-20deg) translateX(0px); 
 }
 
 .skew_right_vido{
@@ -352,6 +450,13 @@ p{
     transform: skew(-20deg);
     /* border: red 2px solid; */
     overflow: hidden;
+    transform: skew(-20deg) translateX(100px);
+    transition: 2s all ; 
+    opacity: 0;
+}
+.skew_right_vido_ani{
+    transform: skew(-20deg) translateX(0px);
+    opacity: 1;
 }
 
 .skew_right_vido video{
@@ -368,7 +473,8 @@ p{
     transform: skew(-20deg);
     opacity: .8;
     z-index: 2;
-    transform: scale(2);
+    transform: scale(2.5);
+    overflow: hidden;
 }
 @media (max-width:1440px){
     .skew_right{
@@ -414,14 +520,26 @@ p{
 .about_title{
     top: 20%;
     color: blue;
-    
+    transform: translateX(-100px);
+    transition: all 2.5s; 
+    opacity: 0;
+}
+.about_title_animation{
+    opacity: 1;
+    transform: translateX(0px); 
 }
 .about_text{
   position: absolute;
   right: 30%;
   color: aliceblue;
   top: 35%;
-
+  transform: translateX(-100px);
+  transition: all 2.5s .5s; 
+  opacity: 0;
+}
+.about_text_animation{
+    opacity: 1;
+    transform: translateX(0px); 
 }
 .about_text p{
     margin: 20px;
@@ -472,18 +590,32 @@ p{
     padding: 0px 800px;
     background-color: blue;
     bottom: 25%; 
-    transform: skew(20deg);
+    transform: skew(20deg) translateX(-100px);
+    transition: all 2.5s; 
+    opacity: 0;
+}
+.skew_left_animation{
+    opacity: 1;
+    transform: skew(20deg) translateX(0px);
 }
 .skew_left_pic{
-   position: absolute;
+    position: absolute;
     left: 50%;
     height: 50%;
     padding: 0px 250px;
     /* background-color: blue; */
     bottom: 35%; 
-    transform: skew(20deg);
-    /* border: 2px red solid; */
+    
+    /* 1
+     */
     overflow: hidden;
+    transform:skew(20deg) translateX(-100px);
+    transition: all 2.5s .5s; 
+    opacity: 0;
+}
+.skew_left_pic_animation{
+    transform: skew(20deg) translateX(0px);
+    opacity: 1;
 }
 .left_pic{
     position: absolute;
@@ -594,8 +726,15 @@ p{
     position: relative;
     width: 100%;
     height: 100vh;
-     border: 2px red solid;
+     /* border: 2px red solid; */
      top: 13%;
+     transform: translateX(100px);
+    transition: all 2.5s; 
+    opacity: 0;
+}
+.service_text_animation{
+    opacity: 1;
+    transform: translateX(0px); 
 }
 .service_text h1{
     color: blue;
@@ -632,7 +771,7 @@ p{
 }
 @media (max-width:375px){
     .service_text{
-        top: 3%;
+        top: 2%;
     }
     .service_text li{
     padding-top: 20px;
@@ -650,18 +789,30 @@ p{
     padding: 0px 600px;
     background-color: blue;
     bottom: 25%; 
-    transform: skew(-20deg)
+    transform:  translateX(100px) skew(-20deg);
+    transition: all 2.5s; 
+    opacity: 0;
 }
-.skew_right_pic{
+.skew_right_contect_ani{
+    opacity: 1;
+    transform: translateX(0px) skew(-20deg); 
+}
+.skew_right_map{
    position: absolute;
     left: 25%;
     height: 50%;
     width: 500px;
     /* background-color: blue; */
     bottom: 35%; 
-    transform: skew(-20deg);
+    transform:translateX(-100px) skew(-20deg);
     border: 8px blue solid;
     overflow: hidden;
+    transition: all 2s; 
+    opacity: 0;
+}
+.skew_right_map_ani{
+    opacity: 1;
+    transform: translateX(0px) skew(-20deg); 
 }
 
 .map{
@@ -669,11 +820,17 @@ p{
     left: -60%;
     transform: skew(20deg) ;
 }
+.contect_text{
+    transform: translateX(-100px);
+    transition: all 2.5s .5s; 
+    opacity: 0; 
+}
 .contect_text h1{
     position: absolute;
     right: 12%;
     top: 120px;
     color: blue;
+     
 }
 .contect_text ul{
     padding-top: 8%;
@@ -683,6 +840,10 @@ p{
     font-size: 20px;
     color: aliceblue;
     
+}
+.contect_text_animation{
+    opacity: 1;
+    transform: translateX(0px); 
 }
 .contect_text li{
     padding-top: 20px;
@@ -704,10 +865,22 @@ p{
     
     }
 }
+@media (max-width:1240px){
+    .skew_right_map{
+ 
+    left: 5%;
+    height: 50%;
+    width: 400px;
+    /* background-color: blue; */
+    bottom: 35%; 
+    
+    
+    }
+}
 @media (max-width:1024px){
-    .skew_right_pic{
-   position: absolute;
-    left: 10%;
+    .skew_right_map{
+ 
+    left: 5%;
     height: 50%;
     width: 400px;
     /* background-color: blue; */
@@ -732,7 +905,7 @@ p{
     height: 50%;
     padding: 0px 400px
     }
-    .skew_right_pic{
+    .skew_right_map{
    position: absolute;
     left:-5%;
     height: 40%;
@@ -769,7 +942,7 @@ p{
     height: 50%;
     padding: 0px 250px
     }
-    .skew_right_pic{
+    .skew_right_map{
    position: absolute;
     left:-5%;
     height: 40%;
@@ -785,7 +958,7 @@ p{
     }
     .contect_text h1{
     right: 15%;
-    top: 50px;
+    top: 40px;
     
     }
     .contect_text ul{
@@ -807,7 +980,7 @@ p{
     }
     .contect_text h1{
     right: 15%;
-    top: 50px;
+    top: 40px;
     
     }
     .contect_text ul{
