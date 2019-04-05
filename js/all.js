@@ -24,14 +24,14 @@ $(document).ready(function () {
                 $(".about_text").addClass("about_text_animation");
             }
         var scrollDistance = $(window).scrollTop();
-            if (scrollDistance > 2000) {
+            if (scrollDistance > 1800) {
                 $(".skew_left").addClass("skew_left_animation");
                 $(".skew_left_pic").addClass("skew_left_pic_animation");
                 $(".service_text").addClass("service_text_animation");
 
             }
         var scrollDistance = $(window).scrollTop();
-            if (scrollDistance > 3000) {
+            if (scrollDistance > 2500) {
                 $(".skew_right_contect").addClass("skew_right_contect_ani");
                 $(".skew_right_map").addClass("skew_right_map_ani");
                 $(".contect_text").addClass("contect_text_animation");
@@ -51,7 +51,7 @@ $(document).ready(function () {
             scrollTop: 900
         }, 1000);
     });
-    document.getElementById('video').play()
+   
 
 
 })
