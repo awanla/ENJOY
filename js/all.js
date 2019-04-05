@@ -51,6 +51,7 @@ $(document).ready(function () {
             scrollTop: 900
         }, 1000);
     });
+    document.getElementById('video').play()
 
 
 })
