@@ -659,10 +659,15 @@ p{
        bottom: 15%;  
     }
     .skew_left_pic{
-        bottom: 50%;
+        bottom: 0%;
         left: 45%; 
     }
     
+    .left_pic{
+   
+    bottom: -60%;
+    
+    }
 }
 
 @media (max-width:425px){
@@ -749,7 +754,7 @@ p{
     font-size: 20px;
     color: aliceblue;
 }
-@media (max-width:1240px){
+@media (max-width:1440px){
     .service_text{
         top: 11%;
     }
